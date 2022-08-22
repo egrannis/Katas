@@ -4,8 +4,8 @@ ring spins counter clockwise (increasing by 1 each spin). We start with both rin
 each move we spin each ring one increment. How many moves will it take before both rings show the same number
 at the top again? */
 
-// The inner ring has integers from 0 to innerMax and the outer ring has integers from 0 to outerMax, where innerMax and outerMax are integers >= 1.;
-// https://www.codewars.com/kata/59afff65f1c8274f270020f5 
+// The inner ring has integers from 0 to innerMax and the outer ring has integers from 0 to outerMax, where innerMax and outerMax are integers >= 1
+// https://www.codewars.com/kata/59afff65f1c8274f270020f5
 
 // Initial solution
 const spinningRings = (innerMax, outerMax) => {
@@ -33,9 +33,9 @@ const spinningRings = (innerMax, outerMax) => {
 
 // Refactored solution
 const spinningRingsRefactored = (innerMax, outerMax) => {
-  let [inner, outer, step] = [0, 0, 0];
+  let [inner, outer, count] = [0, 0, 0];
   do {
-    step++;
+    count++;
     inner--;
     outer++;
     if (inner < 0) {
@@ -46,5 +46,5 @@ const spinningRingsRefactored = (innerMax, outerMax) => {
     }
   }
   while (inner !== outer);
-  return step;
+  return count;
 };
