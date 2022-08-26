@@ -1,4 +1,4 @@
-/* 
+/*
 https://www.codewars.com/kata/60cc93db4ab0ae0026761232/train/javascript
 Task
 A list S will be given. You need to generate a list T from it by following the given process:
@@ -33,11 +33,10 @@ const arrange = (s) => {
 };
 
 
-function recursion(holdArr, resultArr) {
+const recursion = (holdArr, resultArr) => {
   if (holdArr.length > 0) {
     resultArr.push(holdArr[0]);
     holdArr.splice(0, 1);
-
 
     if (holdArr.length >= 1) {
       resultArr.push(holdArr[holdArr.length - 1]);
@@ -52,3 +51,4 @@ function recursion(holdArr, resultArr) {
   }
 
   return resultArr;
+};

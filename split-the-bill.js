@@ -12,8 +12,8 @@ Example
 3 friends go out together: A spends £20, B spends £15, and C spends £10. The function should return an object/dict showing that A should receive £5, B should receive £0, and C should pay £5.
 
 var group = {
-    A: 20, 
-    B: 15, 
+    A: 20,
+    B: 15,
     C: 10
 }
 
