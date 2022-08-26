@@ -8,12 +8,6 @@ String will never be empty and you do not need to account for different data typ
 
 const findShort = (s) => {
   let holdArr = s.split(' ');
-  let min = Infinity;
-
-  for (let i = 0; i < holdArr.length; i++) {
-    if (holdArr[i].length < min) {
-      min = holdArr[i].length;
-    }
-  }
-  return min;
+  holdArr.sort((a, b) => a.length - b.length);
+  return holdArr[0].length;
 };
