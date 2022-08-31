@@ -14,17 +14,11 @@ parse("iiisdoso") => [ 8, 64 ]
 
 // Return the output array, and ignore all non-op characters
 const parse = (data) => {
-  let dataArr = data.split("");
-  console.log(dataArr);
-
-  // go in order through array
-  // each time we encounter a command we need it to perform the command and manipulate a value 
-  // the manipulated value is initialized at 0 
 
   let returnArr = [];
   let newVal = 0;
 
-  for (l of dataArr) {
+  for (let l of data) {
     if (l === 'i') {
       newVal += 1;
     }
