@@ -23,9 +23,8 @@ var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["
 
 */
 
-function solution(input, markers) {
+const solution = (input, markers) => {
   let inpArr = input.split('\n');
-  let returnStr = '';
 
   for (let i = 0; i < inpArr.length; i++) {
     for (let j = 0; j < inpArr[i].length; j++) {
